@@ -1,21 +1,21 @@
 {
 	"name": "rollup-plugin-glob-imports",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "module",
 	"exports": "./src/index.ts",
 	"scripts": {
 		"build": "ts-node ./scripts/build.ts"
 	},
 	"peerDependencies": {
-		"rollup": "3.25.3"
+		"rollup": "^3.25.3"
 	},
 	"dependencies": {
-		"glob-imports": "1.0.0",
-		"pathe": "1.1.1"
+		"glob-imports": "^1.0.1",
+		"pathe": "^1.1.1"
 	},
 	"devDependencies": {
-		"lionconfig": "3.0.1",
-		"rollup": "3.25.3",
-		"typescript": "5.1.6"
+		"lionconfig": "^3.0.1",
+		"rollup": "^3.25.3",
+		"typescript": "^5.1.6"
 	}
 }
