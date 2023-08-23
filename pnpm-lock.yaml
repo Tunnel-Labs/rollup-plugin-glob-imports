@@ -6,21 +6,21 @@ settings:
 
 dependencies:
   glob-imports:
-    specifier: 1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
   pathe:
-    specifier: 1.1.1
+    specifier: ^1.1.1
     version: 1.1.1
 
 devDependencies:
   lionconfig:
-    specifier: 3.0.1
+    specifier: ^3.0.1
     version: 3.0.1(typescript@5.1.6)
   rollup:
-    specifier: 3.25.3
+    specifier: ^3.25.3
     version: 3.25.3
   typescript:
-    specifier: 5.1.6
+    specifier: ^5.1.6
     version: 5.1.6
 
 packages:
@@ -1227,6 +1227,13 @@ packages:
     resolution: {integrity: sha512-yhxwIlFVSVcMym3O31HoMnRXpoenmpIxcj4Yoes2DUpe+xCJnA7ECQP1Vw889V0jTt/2nzvpLQ/UuMYCd3JPIg==}
     dev: true
 
+  /@tunnel/get-monorepo@1.0.0:
+    resolution: {integrity: sha512-uxvpiEmcIP8GdzIk9p9aozYUIJ+wQe3Rko+6W7uqyfnetoGjJznax0SJuKJS5+Hkm4x6NJL/nx/5CJjXBu56gg==}
+    dependencies:
+      map-obj: 5.0.2
+      pkg-up: 4.0.0
+    dev: false
+
   /@types/cacheable-request@6.0.3:
     resolution: {integrity: sha512-IQ3EbTzGxIigb1I3qPZc1rWJnH0BmSKv5QYTalEwweFvyBDLSAe24zP0le/hyi7ecGfZVlIVAg4BZqb8WBwKqw==}
     dependencies:
@@ -2424,6 +2431,7 @@ packages:
   /detect-indent@7.0.1:
     resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
     engines: {node: '>=12.20'}
+    dev: true
 
   /detect-libc@2.0.2:
     resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
@@ -2482,6 +2490,7 @@ packages:
     engines: {node: '>=16'}
     dependencies:
       type-fest: 3.13.1
+    dev: true
 
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
@@ -3545,11 +3554,11 @@ packages:
     resolution: {integrity: sha512-WWOec4aRI7YAykQ9+BHmzjyNlkfJFG8QLXnDTsLz/kZefq7qkzdfo4p6fkYYMIq1aj+gZcQs/1HQhQh3DPPxlQ==}
     dev: true
 
-  /glob-imports@1.0.0:
-    resolution: {integrity: sha512-84TQ0rFA/dFTnPx+it/d/OMLEWuHnUaxNlBoCKtiowgzWjQw+2AY12xhoWDK+Sa//BrcnNB5HhLZpo+rXZf/SA==}
+  /glob-imports@1.0.1:
+    resolution: {integrity: sha512-6hKCbp8m/vdC6ZECrg38GnYvfCvkIohvaH6baNVC0TfYMbfgvKjF4G0sVIAgKA/exk5bQyRvh0OyRe9kOcWSug==}
     dependencies:
+      '@tunnel/get-monorepo': 1.0.0
       glob: 10.3.1
-      lion-utils: 0.2.2
     dev: false
 
   /glob-parent@5.1.2:
@@ -4521,14 +4530,6 @@ packages:
       pkg-up: 4.0.0
     dev: true
 
-  /lion-utils@0.2.2:
-    resolution: {integrity: sha512-6n3tglrDw6o16iSAwZfA61XYSP81TlvfTMUuS2Cu2BIeJquDrdBCJIOl1GlCr45Cafd+GLkiIvUJIEkwKrxX7Q==}
-    dependencies:
-      detect-indent: 7.0.1
-      dot-prop: 8.0.2
-      pkg-up: 4.0.0
-    dev: false
-
   /lionconfig@3.0.1(typescript@5.1.6):
     resolution: {integrity: sha512-ls9H4ye0kMBcGaxL1hrOAYO20vxzHvz5kskoPzI3PC7SiU44AdDyaFFHYcmx+qIVe1jJVemi+0jcY0vDRMtWEw==}
     hasBin: true
@@ -4894,6 +4895,11 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
     dev: true
+
+  /map-obj@5.0.2:
+    resolution: {integrity: sha512-K6K2NgKnTXimT3779/4KxSvobxOtMmx1LBZ3NwRxT/MDIR3Br/fQ4Q+WCX5QxjyUR8zg5+RV9Tbf2c5pAWTD2A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
 
   /markdown-it@13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
@@ -6871,6 +6877,7 @@ packages:
   /type-fest@3.13.1:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
+    dev: true
 
   /typed-array-buffer@1.0.0:
     resolution: {integrity: sha512-Y8KTSIglk9OZEr8zywiIHG/kmQ7KWyjseXs1CbSo8vC42w7hg2HgYTxSWwP0+is7bWDc1H+Fo026CpHFwm8tkw==}
