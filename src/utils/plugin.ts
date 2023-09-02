@@ -17,15 +17,15 @@ export function globImports(): Plugin {
     name: "glob-imports",
     resolveId: {
       order: "pre",
-      handler(source: string, importerFilePath: string | undefined) {
-        if (importerFilePath === undefined) {
+      handler(source: string, importerFilepath: string | undefined) {
+        if (importerFilepath === undefined) {
           return null;
         }
 
         if (isGlobSpecifier(source)) {
           const absoluteGlobPattern = getAbsoluteGlobPattern({
             globfileModuleSpecifier: source,
-            importerFilePath,
+            importerFilepath,
           });
           if (!watchedGlobs.has(absoluteGlobPattern)) {
             watchedGlobs.add(absoluteGlobPattern);
@@ -34,7 +34,7 @@ export function globImports(): Plugin {
 
           return getGlobfilePath({
             globfileModuleSpecifier: source,
-            importerFilePath,
+            importerFilepath,
           });
         }
       },
