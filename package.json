@@ -10,7 +10,8 @@
 		"rollup": "^3.25.3"
 	},
 	"dependencies": {
-		"glob-imports": "^1.0.1",
+		"get-monorepo-root": "^1.0.1",
+		"glob-imports": "^2.0.0",
 		"pathe": "^1.1.1"
 	},
 	"devDependencies": {
