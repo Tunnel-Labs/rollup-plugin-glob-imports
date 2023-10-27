@@ -1,6 +1,7 @@
 import {
   isGlobSpecifier,
   createGlobfileManager,
+  getAbsoluteGlobPattern,
   // @ts-expect-error: forgot to add types
 } from "glob-imports";
 import path from "pathe";
@@ -9,10 +10,9 @@ import { getMonorepoDirpath } from "get-monorepo-root";
 
 export function globImports(): Plugin {
   const watchedGlobs = new Set<string>();
-  const { getAbsoluteGlobPattern, getGlobfileContents, getGlobfilePath } =
-    createGlobfileManager({
-      monorepoDirpath: getMonorepoDirpath(import.meta.url)
-    });
+  const { getGlobfileContents, getGlobfilePath } = createGlobfileManager({
+    monorepoDirpath: getMonorepoDirpath(import.meta.url),
+  });
   return {
     name: "glob-imports",
     resolveId: {

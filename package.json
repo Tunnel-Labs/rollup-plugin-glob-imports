@@ -1,22 +1,22 @@
 {
-	"name": "rollup-plugin-glob-imports",
-	"version": "1.0.3",
-	"type": "module",
-	"exports": "./src/index.ts",
-	"scripts": {
-		"build": "ts-node ./scripts/build.ts"
-	},
-	"peerDependencies": {
-		"rollup": "^3.25.3"
-	},
-	"dependencies": {
-		"get-monorepo-root": "^1.0.1",
-		"glob-imports": "^3.0.0",
-		"pathe": "^1.1.1"
-	},
-	"devDependencies": {
-		"lionconfig": "^3.0.1",
-		"rollup": "^3.25.3",
-		"typescript": "^5.1.6"
-	}
+  "name": "rollup-plugin-glob-imports",
+  "version": "1.0.5",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "build": "ts-node ./scripts/build.ts"
+  },
+  "peerDependencies": {
+    "rollup": "^4"
+  },
+  "dependencies": {
+    "get-monorepo-root": "^1.0.1",
+    "glob-imports": "^3.0.0",
+    "pathe": "^1.1.1"
+  },
+  "devDependencies": {
+    "lionconfig": "^3.0.1",
+    "rollup": "^4.1.4",
+    "typescript": "^5.1.6"
+  }
 }
